@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Räkna ut cirkelns area och omkrets</title>
+</head>
+<body>
+    <script>
+        let r = prompt("Ange cirkelns radie i cm");
+
+        /* Funktionen räknar ut cirkelns area och omkrets utifrån dess radie */
+        function getCircle(r){
+            let omkrets = 2 * Math.PI * r;
+            let area = Math.PI * Math.pow(r, 2);
+            /* Variablerna omkrets och area läggs i en array för att kunna returnera båda värdena
+            Värdena som returneras begränsas till en decimal för snyggare presentation */
+            let sizes = [omkrets.toFixed(1), area.toFixed(1)];
+            return (sizes);
+}
+/* Skapar en variabel som kör funktionen med det värde som matas in i pompten
+så att funktionen endast behöver köras en gång */
+let circle = getCircle(r);
+
+/* "Cirkelns omkrets är x cm och arean är x cm2" */
+alert (`Cirkelns omkrets är ${(circle[0])} cm och arean är ${circle[1]} cm2`);
+
+        </script>
+    
+</body>
+</html>
